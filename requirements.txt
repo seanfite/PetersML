@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+pydantic
+psycopg[binary]
+torch
+google-cloud-storage
+httpx>=0.28,<1

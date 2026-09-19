@@ -1,0 +1,24 @@
+
+Start local proxy
+------------------------------------------------------------
+cloud-sql-proxy --address 127.0.0.1 --port 5432 \
+peters-bb1f7:us-west1:peters
+
+Start venv
+----------------------------------
+source .venv/bin/activate
+
+Set postgres auth
+---------------------------
+export APP_DSN="host=127.0.0.1 port=5432 dbname=peters user=postgres password='Alan4life$' sslmode=disable"
+export PORT=8081
+export PETERS_GRAPH_URL="http://127.0.0.1:8082"
+
+Run Functions
+---------------------------
+python -m training.run_training
+python -m training.promote_model x
+
+Run Server
+---------------------------
+python -m inference.app

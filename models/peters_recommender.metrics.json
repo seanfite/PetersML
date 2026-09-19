@@ -1,0 +1,297 @@
+{
+  "best_epoch": 5,
+  "feature_schema_version": 5,
+  "peters_score": {
+    "positive_weights": {
+      "outcome_favorite": 0.8,
+      "outcome_image_reaction": 0.6,
+      "outcome_message_started": 1.5,
+      "outcome_partner_accepted": 1.5,
+      "outcome_poke": 0.3,
+      "outcome_private_album_grant": 0.4,
+      "outcome_reciprocal_message": 2.5,
+      "outcome_story_engagement": 0.4
+    },
+    "risk_weights": {
+      "outcome_block": 1.0,
+      "outcome_report": 2.0
+    }
+  },
+  "positive_weights": {
+    "outcome_any_positive": 1.0,
+    "outcome_block": 1.0,
+    "outcome_favorite": 1.3333333333333333,
+    "outcome_image_reaction": 1.0,
+    "outcome_message_started": 1.3333333333333333,
+    "outcome_partner_accepted": 1.0,
+    "outcome_poke": 6.0,
+    "outcome_private_album_grant": 2.5,
+    "outcome_reciprocal_message": 6.0,
+    "outcome_report": 6.0,
+    "outcome_story_engagement": 1.0
+  },
+  "rows": {
+    "test": 1,
+    "total": 10,
+    "train": 7,
+    "validation": 2
+  },
+  "split_mode": "random",
+  "test": {
+    "loss": 1.9422638416290283,
+    "ranking": {
+      "k": 20,
+      "ndcg_at_k": 1.0,
+      "outcome_block_rate_at_k": 0.0,
+      "outcome_favorite_rate_at_k": 1.0,
+      "outcome_message_started_rate_at_k": 1.0,
+      "outcome_reciprocal_message_rate_at_k": 1.0,
+      "outcome_report_rate_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "viewers": 1
+    },
+    "rows": 1,
+    "targets": {
+      "outcome_any_positive": {
+        "accuracy": 1.0,
+        "average_precision": 1.0,
+        "positive_rate": 1.0,
+        "positives": 1,
+        "precision_at_0_5": 1.0,
+        "recall_at_0_5": 1.0,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_block": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_favorite": {
+        "accuracy": 0.0,
+        "average_precision": 1.0,
+        "positive_rate": 1.0,
+        "positives": 1,
+        "precision_at_0_5": null,
+        "recall_at_0_5": 0.0,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_image_reaction": {
+        "accuracy": 0.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": 0.0,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_message_started": {
+        "accuracy": 1.0,
+        "average_precision": 1.0,
+        "positive_rate": 1.0,
+        "positives": 1,
+        "precision_at_0_5": 1.0,
+        "recall_at_0_5": 1.0,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_partner_accepted": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_poke": {
+        "accuracy": 1.0,
+        "average_precision": 1.0,
+        "positive_rate": 1.0,
+        "positives": 1,
+        "precision_at_0_5": 1.0,
+        "recall_at_0_5": 1.0,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_private_album_grant": {
+        "accuracy": 1.0,
+        "average_precision": 1.0,
+        "positive_rate": 1.0,
+        "positives": 1,
+        "precision_at_0_5": 1.0,
+        "recall_at_0_5": 1.0,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_reciprocal_message": {
+        "accuracy": 0.0,
+        "average_precision": 1.0,
+        "positive_rate": 1.0,
+        "positives": 1,
+        "precision_at_0_5": null,
+        "recall_at_0_5": 0.0,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_report": {
+        "accuracy": 0.0,
+        "average_precision": 1.0,
+        "positive_rate": 1.0,
+        "positives": 1,
+        "precision_at_0_5": null,
+        "recall_at_0_5": 0.0,
+        "roc_auc": null,
+        "rows": 1
+      },
+      "outcome_story_engagement": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 1
+      }
+    }
+  },
+  "train_loss": 0.6704646348953247,
+  "validation": {
+    "loss": 0.6108050346374512,
+    "ranking": {
+      "k": 20,
+      "ndcg_at_k": null,
+      "outcome_block_rate_at_k": 0.0,
+      "outcome_favorite_rate_at_k": 0.0,
+      "outcome_message_started_rate_at_k": 0.0,
+      "outcome_reciprocal_message_rate_at_k": 0.0,
+      "outcome_report_rate_at_k": 0.0,
+      "precision_at_k": 0.0,
+      "recall_at_k": null,
+      "viewers": 1
+    },
+    "rows": 2,
+    "targets": {
+      "outcome_any_positive": {
+        "accuracy": 0.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": 0.0,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_block": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_favorite": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_image_reaction": {
+        "accuracy": 0.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": 0.0,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_message_started": {
+        "accuracy": 0.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": 0.0,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_partner_accepted": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_poke": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_private_album_grant": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_reciprocal_message": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_report": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      },
+      "outcome_story_engagement": {
+        "accuracy": 1.0,
+        "average_precision": null,
+        "positive_rate": 0.0,
+        "positives": 0,
+        "precision_at_0_5": null,
+        "recall_at_0_5": null,
+        "roc_auc": null,
+        "rows": 2
+      }
+    }
+  }
+}
