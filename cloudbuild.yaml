@@ -6,11 +6,9 @@ steps:
       - "gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
       - "--builder"
       - "gcr.io/buildpacks/builder:latest"
-
-  - name: "gcr.io/cloud-builders/docker"
-    args:
-      - "push"
-      - "gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
+      - "--network"
+      - "cloudbuild"
+      - "--publish"
 
   - name: "gcr.io/cloud-builders/gcloud"
     args:
@@ -21,9 +19,6 @@ steps:
       - "--region=us-west1"
       - "--image=gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
       - "--quiet"
-
-images:
-  - "gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
 
 options:
   logging: CLOUD_LOGGING_ONLY
