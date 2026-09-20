@@ -18,6 +18,8 @@ steps:
       - "peters-ml"
       - "--region=us-west1"
       - "--image=gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
+      - "--memory=2Gi"
+      - "--cpu=1"
       - "--quiet"
 
 options:
