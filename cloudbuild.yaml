@@ -1,12 +1,11 @@
 steps:
   - name: "gcr.io/k8s-skaffold/pack"
+    entrypoint: "pack"
     args:
       - "build"
       - "gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
       - "--builder"
       - "gcr.io/buildpacks/builder:latest"
-      - "--env"
-      - "GOOGLE_ENTRYPOINT=python -m inference.app"
 
   - name: "gcr.io/cloud-builders/docker"
     args:
