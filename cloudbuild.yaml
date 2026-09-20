@@ -1,0 +1,31 @@
+steps:
+  - name: "gcr.io/k8s-skaffold/pack"
+    args:
+      - "build"
+      - "gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
+      - "--builder"
+      - "gcr.io/buildpacks/builder:latest"
+      - "--env"
+      - "GOOGLE_ENTRYPOINT=python -m inference.app"
+
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - "push"
+      - "gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - "run"
+      - "services"
+      - "update"
+      - "peters-ml"
+      - "--region=us-west1"
+      - "--image=gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
+      - "--quiet"
+
+images:
+  - "gcr.io/$PROJECT_ID/github.com/seanfite/petersml:$COMMIT_SHA"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  
